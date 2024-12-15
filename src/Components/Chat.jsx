@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { io } from "socket.io-client";
 
 const Chat = ({ userName }) => {
-  const socket = useMemo(() => io("http://localhost:3000"), []);
+  const socket = useMemo(() => io("https://chatwithstrangerbackend.onrender.com"), []);
 
   const [room, setRoom] = useState(null);
   const [messages, setMessages] = useState([]);
